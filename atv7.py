@@ -1,17 +1,19 @@
-#Crie um programa onde o usuário possa digitar vários valores numéricos
-# e cadastre-os em uma lista. Caso o número já exista lá dentro, ele não
-# será adicionado. No final, serão exibidos todos os valores únicos digitados
-#em ordem crescente
+#Crie uma classe Instrumento com um método tocar().
+# Crie classes filhas como Violino, Piano e Flauta que herdem da classe
+# Instrumento e sobrescrevam o método tocar().
 
-num = []
+class Instrumento:
+    def tocar(self):
+        pass
 
-p = int(input('quantas vezes você ira testar o programa?\n'))
+class Violino(Instrumento):
+    def tocar(self):
+        return "Tocando o violino"
 
-for i in range(p):
-    x = int(input('digite algum número\n'))
-    if x == 0:
-        break
-    elif x not in num:
-        num.append(x)
-num.sort()
-print(num)
+class Piano(Instrumento):
+    def tocar(self):
+        return "Tocando o piano"
+
+class Flauta(Instrumento):
+    def tocar(self):
+        return "Tocando a flauta"
